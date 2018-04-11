@@ -22,9 +22,9 @@ import com.samuel.model.StudentModel;
 public class AdmissionController {
 	
 	@RequestMapping(value="/admissionform", method=RequestMethod.GET)
-	public ModelAndView getAdmissionDetails() {
-		ModelAndView modelview= new ModelAndView("admissionform");
-		return modelview;
+	public String getAdmissionDetails() {
+		//ModelAndView modelview= new ModelAndView("admissionform");
+		return "admissionform";
 	}
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
