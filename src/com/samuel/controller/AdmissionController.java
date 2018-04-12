@@ -22,12 +22,12 @@ import com.samuel.model.StudentModel;
 public class AdmissionController {
 	
 	@RequestMapping(value="/admissionform", method=RequestMethod.GET)
-	public String getAdmissionDetails() {
+	public ModelAndView getAdmissionDetails() {
 		ModelAndView modelview= new ModelAndView("admissionform");
-		return "admissionform";
+		return modelview;
 	}
 	@InitBinder
-	public void initBinder(WebDataBinder binder) {
+	public void initBinonder(WebDataBinder binder) {
 		SimpleDateFormat dateFormat= new SimpleDateFormat("yyyy-mm-dd");
 		binder.registerCustomEditor(Date.class, "studentDOB", new CustomDateEditor(dateFormat, false));
 	}
