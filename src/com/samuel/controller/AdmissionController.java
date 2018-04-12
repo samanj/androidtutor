@@ -23,7 +23,7 @@ public class AdmissionController {
 	
 	@RequestMapping(value="/admissionform", method=RequestMethod.GET)
 	public String getAdmissionDetails() {
-		//ModelAndView modelview= new ModelAndView("admissionform");
+		ModelAndView modelview= new ModelAndView("admissionform");
 		return "admissionform";
 	}
 	@InitBinder
